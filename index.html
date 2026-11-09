@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet Target — A Survival Guide for Targeted Individuals</title>
+  <meta name="description" content="Stoic philosophy, cognitive behavioural tools and Catholic wisdom for enduring harassment with a steady mind.">
+  <meta name="theme-color" content="#0a0b10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <header class="sticky-header" role="banner">
+    <div class="header-left"><span class="wordmark">The Quiet Target</span></div>
+    <div class="header-right">
+      <button class="header-btn breathe-btn" aria-label="Open breathing exercise" aria-expanded="false" aria-controls="breathe-overlay">Breathe</button>
+      <button class="header-btn search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="search-overlay">🔍</button>
+      <div class="text-size-stepper" role="group" aria-label="Text size">
+        <button class="text-size-decrease" aria-label="Decrease text size">A-</button>
+        <button class="text-size-reset" aria-label="Reset text size">A</button>
+        <button class="text-size-increase" aria-label="Increase text size">A+</button>
+      </div>
+      <button class="header-btn theme-toggle" aria-label="Toggle light and dark theme" aria-pressed="false">🌓</button>
+      <button class="header-btn print-btn" aria-label="Print this page">Print</button>
+      <button class="header-btn toc-toggle" aria-label="Open table of contents" aria-expanded="false" aria-controls="toc-overlay">☰</button>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </header>
+
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+    <div class="search-overlay-content">
+      <button class="search-close" aria-label="Close search">✕</button>
+      <h2 id="search-title">Search the guide</h2>
+      <input type="text" id="search-input" placeholder="Try: control, anger, sleep, Marcus, prayer…" aria-label="Search the guide" autocomplete="off">
+      <div class="search-results" id="search-results" role="list" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="breathe-overlay" id="breathe-overlay" role="dialog" aria-modal="true" aria-labelledby="breathe-title" hidden>
+    <div class="breathe-content">
+      <button class="breathe-close" aria-label="Close breathing exercise">✕</button>
+      <h2 id="breathe-title">Breathe</h2>
+      <div class="breath-orb" aria-hidden="true"></div>
+      <p class="breath-label" id="breath-label" aria-live="polite">Breathe in</p>
+      <p class="breath-help">In for four, out for six. Let your shoulders drop. Feel your feet on the floor.</p>
+      <p class="breath-line">“Pray, hope, and don’t worry.” — Padre Pio</p>
+      <p class="breath-safety">In danger, or thinking of harming yourself or someone else? Call 911, or call or text 988 (Canada and US).</p>
+    </div>
+  </div>
+
+  <nav class="toc-overlay" id="toc-overlay" aria-label="Table of contents" hidden>
+    <div class="toc-overlay-content">
+      <button class="toc-close" aria-label="Close table of contents">✕</button>
+      <h2 id="toc-title">Contents</h2>
+      <ol class="toc-list" id="toc-list"></ol>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <nav class="toc-rail" id="toc-rail" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol class="toc-list" id="toc-rail-list"></ol>
+    </nav>
+
+    <main class="main-content" id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">A survival guide for targeted individuals</p>
+        <h1 id="hero-title">The Quiet Target</h1>
+        <div class="ornament" aria-hidden="true"><span>✦</span></div>
+        <p class="subtitle">Philosophy as the antidote.</p>
+        <p class="philosophy-rule">This guide does not try to settle what is happening or why. It offers what works either way: a mind that can bear it, a day with order in it, and a faith that holds. Every section ends with one small practice you can do alone.</p>
+        <button class="start-btn" id="start-btn">Start here</button>
+        <p class="hero-note">Read one section a day. Slowly is the point.</p>
+        <p class="who">For anyone who feels watched, followed or targeted, and for those who love someone who does.</p>
+        <div class="paths">
+          <button class="path" id="path-relief" type="button"><span class="path-label">Right now</span><strong>I need relief</strong><span>A one-minute breathing exercise.</span></button>
+          <a class="path" href="#section-1"><span class="path-label">New here</span><strong>Start at the beginning</strong><span>What is yours, and what is not.</span></a>
+          <a class="path" href="#section-21"><span class="path-label">This week</span><strong>Give me a daily plan</strong><span>The Daily Rule, in three parts.</span></a>
+        </div>
+      </section>
+
+      <div class="reader-column" id="reader-column">
+
+        <section class="howto" aria-label="How to use this guide">
+          <div><span class="howto-n">1</span><h3>Go slowly</h3><p>One section a day is plenty. This is a practice, not a book to finish.</p></div>
+          <div><span class="howto-n">2</span><h3>Do the practice</h3><p>Every section ends with one small thing to do. Reading alone changes little; doing changes a lot.</p></div>
+          <div><span class="howto-n">3</span><h3>Come back</h3><p>On a bad day, open Breathe and the Daily Rule. You do not need to read anything else.</p></div>
+        </section>
+
+        <!-- PART I -->
+        <header class="part" id="part-1"><p class="part-num">Part I</p><h2 class="part-title">The Foundation</h2></header>
+
+        <section class="section" id="section-1" aria-labelledby="s1-title">
+          <h2 id="s1-title">Locus of Control: What Is Yours</h2>
+          <p>Psychologists speak of a <em>locus of control</em>. A person with an external locus believes their peace depends on what happens to them: who does what, when, and whether it stops. A person with an internal locus knows that events are not theirs to command, but their response always is. Nearly everything in this guide grows from that one distinction.</p>
+          <p>Two thousand years before the term existed, Epictetus, a slave who became one of the great Stoic teachers, opened his handbook with it:</p>
+          <blockquote class="pull-quote">Some things are in our control, and others not.<cite>Epictetus, Enchiridion 1</cite></blockquote>
+          <div class="control-grid">
+            <div class="control-card mine">
+              <h3>Yours</h3>
+              <ul>
+                <li>How you interpret what happens</li>
+                <li>Where you place your attention</li>
+                <li>What you do next</li>
+                <li>How you treat people</li>
+                <li>Your sleep, food and movement</li>
+                <li>Your prayer and your principles</li>
+                <li>The next small task</li>
+              </ul>
+            </div>
+            <div class="control-card not-mine">
+              <h3>Not yours</h3>
+              <ul>
+                <li>What others say, think or do</li>
+                <li>Whether it stops, and when</li>
+                <li>The past</li>
+                <li>Whether others believe you</li>
+                <li>Your reputation</li>
+                <li>The outcome of anything</li>
+                <li>Other people’s verdicts</li>
+              </ul>
+            </div>
+          </div>
+          <p>Epictetus added a third category: things that are <em>partly</em> yours. An archer controls his aim, his draw and his release. He does not control the wind or whether the target stays put. Do your part with full skill, then let the result go. Energy spent on the right-hand column is spent for nothing, and it is the energy you need for the left.</p>
+          <p class="action"><strong>Practice.</strong> Each morning, draw two columns on paper: <em>Mine</em> and <em>Not mine</em>. Put every worry in one or the other. Then act only on the first column.</p>
+        </section>
+
+        <!-- PART II -->
+        <header class="part" id="part-2"><p class="part-num">Part II</p><h2 class="part-title">The Stoic Discipline</h2></header>
+
+        <section class="section" id="section-2" aria-labelledby="s2-title">
+          <h2 id="s2-title">The Morning Rehearsal</h2>
+          <p>The Stoics practised <em>premeditatio malorum</em>, the rehearsal of difficulty in advance. The point is not to dwell on dread but to take away its power to ambush. A hardship expected is weather. A hardship unexpected is an assault. Marcus Aurelius, emperor of Rome and commander in a long war, began his day this way:</p>
+          <blockquote class="pull-quote">Begin the morning by saying to thyself, I shall meet with the busy-body, the ungrateful, arrogant, deceitful, envious, unsocial.<cite>Marcus Aurelius, Meditations 2.1 (Long translation)</cite></blockquote>
+          <p>Then he went on to the reason he would not be angry: they act as they do from ignorance of what is truly good. Prepare, then forgive in advance, and walk out the door with your composure already on.</p>
+          <p class="action"><strong>Practice.</strong> Say aloud each morning: “Today may be hard. Whatever comes, I will keep my judgement, my manners and my work.”</p>
+        </section>
+
+        <section class="section" id="section-3" aria-labelledby="s3-title">
+          <h2 id="s3-title">It Is the Judgement, Not the Event</h2>
+          <p>The Stoics never claimed that nothing happens to you. They claimed that between what happens and how you suffer, there is a step, and that step is yours. First impressions arrive uninvited: a flash of fear, a rush of anger, a certainty that something means something. You cannot stop them. You can decline to agree with them on the spot.</p>
+          <blockquote class="pull-quote">If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgement about it. And it is in thy power to wipe out this judgement now.<cite>Marcus Aurelius, Meditations 8.47</cite></blockquote>
+          <blockquote class="pull-quote">Men are disturbed, not by things, but by the principles and notions which they form concerning things.<cite>Epictetus, Enchiridion 5</cite></blockquote>
+          <p>Epictetus taught his students to meet every strong impression with a sentence: <em>“You are an appearance, and not at all the thing you appear to be.”</em> Then examine it by your rules before you act on it. Marcus pushed the same idea further: take away the opinion “I have been harmed,” and the sense of harm is taken away with it (<em>Meditations</em> 4.7).</p>
+          <p class="action"><strong>Practice.</strong> When alarm rises, take three slow breaths and say, “This is an impression. I will look at it before I believe it.” Act only after the breaths.</p>
+        </section>
+
+        <section class="section" id="section-4" aria-labelledby="s4-title">
+          <h2 id="s4-title">Athenodorus Keeps Writing</h2>
+          <p>Pliny the Younger tells of a house in Athens with a bad name, so cheap that no one would rent it. The Stoic philosopher Athenodorus read the price, took the house, and on his first night sat down to work. A chained figure appeared in the doorway and beckoned. He glanced up, judged it nothing, and returned to his writing. The chains rattled louder. Only then did he take a lamp and follow the figure to the courtyard, where it pointed at the ground and vanished. He marked the spot and went back to his desk.</p>
+          <p>The next day, officials dug up the place and found bones in chains. They were buried properly at public expense, and the house was never troubled again.</p>
+          <p>Four lessons: he kept working. He did not run, and he did not theorise. He resolved the matter in daylight, with procedure and other people. And the remedy was plain and dull: a spade and a burial, nothing dramatic.</p>
+          <p class="action"><strong>Practice.</strong> The next time something disturbs you, finish the task in your hands first. Investigate later, in daylight, with a calm head.</p>
+        </section>
+
+        <section class="section" id="section-5" aria-labelledby="s5-title">
+          <h2 id="s5-title">The Inner Citadel</h2>
+          <p>Marcus wrote his private notebook, the <em>Meditations</em>, in army camps, surrounded by plague, betrayal and war. He never published it. It was a place to retreat to, and he tells us where that place is:</p>
+          <blockquote class="pull-quote">It is in thy power whenever thou shalt choose to retire into thyself. For nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul.<cite>Marcus Aurelius, Meditations 4.3</cite></blockquote>
+          <blockquote class="pull-quote">Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.<cite>Marcus Aurelius, Meditations 7.59</cite></blockquote>
+          <p>The citadel is not a bunker and it takes no equipment. It is the part of you that judges, chooses and loves, and no outside force can enter it unless you open the door. Visit it daily, so that you know the way when you need it.</p>
+          <p class="action"><strong>Practice.</strong> Spend ten minutes a day in silence, with no screen and nothing to solve. Sit, breathe, and let the noise settle on its own.</p>
+        </section>
+
+        <section class="section" id="section-6" aria-labelledby="s6-title">
+          <h2 id="s6-title">Bear and Forbear</h2>
+          <p>Epictetus summed up the whole discipline in two Latin words preserved by Aulus Gellius: <em>sustine et abstine</em>, “bear and forbear.” <strong>Bear</strong> what cannot be changed, without complaint and without breaking. <strong>Forbear</strong> the reactions that only make it worse: the retort, the spiral, the midnight research.</p>
+          <p>Endurance in this sense is not passive. It is the most active thing a person can do, a decision made again and again, hour by hour.</p>
+          <blockquote class="pull-quote">The impediment to action advances action. What stands in the way becomes the way.<cite>Marcus Aurelius, Meditations 5.20</cite></blockquote>
+          <p>What stands in your way is also your training ground. Courage cannot be built in comfort, and patience needs something to be patient with.</p>
+          <p class="action"><strong>Practice.</strong> When pressure rises, name it in one word (“fear,” “anger,” “dread”), set it down like a bag, and return to your task. Repeat as often as needed.</p>
+        </section>
+
+        <section class="section" id="section-callus" aria-labelledby="scallus-title">
+          <h2 id="scallus-title">Callus the Mind</h2>
+          <p>David Goggins, a former Navy SEAL and ultramarathon runner, built a career on one idea: that the mind, like the hands, grows tougher with use. His book <em>Can’t Hurt Me</em> calls it a calloused mind. He did not invent it. The Stoics practised the same discipline two thousand years earlier, and they gave it a name, <em>askesis</em>, meaning training.</p>
+          <p>Seneca advised his friend Lucilius to set aside a few days now and then to live on plain food and rough clothes, and to ask himself, “Is this the condition that I feared?” (<em>Letters</em> 18). The point was to discover that hardship is survivable before it arrives, and so to lose the fear of it. The teacher Musonius Rufus taught that virtue, like any skill, is trained by exercise of body and soul together.</p>
+          <blockquote class="pull-quote">Is this the condition that I feared?<cite>Seneca, Letters to Lucilius 18</cite></blockquote>
+          <p>Goggins also describes a rule of thumb, often called the 40% rule: when your mind says you are finished, you usually have a great deal left. Treat it as a reminder that your <em>feelings</em> are a poor judge of your <em>capacity</em>. Fear, fatigue and dread speak with great confidence, and they are often wrong.</p>
+          <p><strong>A necessary caution.</strong> Callusing the mind means choosing small hard things deliberately, not breaking yourself. Sleep, food and rest are part of the training, and a body pushed through exhaustion or pain makes everything look more threatening. Anger is a poor fuel, too: the Stoic aim is composure, not a grudge. And the honest version of the title is this: <em>things can hurt me, but they cannot move me.</em> Real toughness includes knowing when to ask for help (see “When to Ask for Help”).</p>
+          <p class="action"><strong>Practice.</strong> Each day, do one small, voluntary, healthy hard thing: a cold shower, a longer walk, a difficult phone call, the task you have been avoiding. Afterward, write one line: “I did that.”</p>
+        </section>
+
+        <section class="section" id="section-cookie" aria-labelledby="scookie-title">
+          <h2 id="scookie-title">The Cookie Jar and the Mirror</h2>
+          <p>Two more of Goggins’s tools sit comfortably beside the old philosophy. The first is the <em>cookie jar</em>: a mental store of the hard things you have already survived. When the mind says “I can’t,” you reach into the jar and take out the evidence. It is the same thing CBT asks you to do with a thought record, which is to set the feeling against the facts. Your history is on your side.</p>
+          <p>The second is the <em>accountability mirror</em>: standing in front of a mirror and telling yourself the truth about where you are slipping and what you will do about it. The Stoics had their own version. Seneca closed each day by reviewing it, asking what he had done well and where he had failed, without scolding himself, and Marcus wrote to himself in just this way. Done with honesty and kindness, it is a source of clarity, not shame.</p>
+          <p>A word about the spirit of it. Goggins’s style is loud, and not everyone needs that. If shouting at yourself does not help, do not do it. The Stoics, and the Church, would have you be firm and gentle together: strict about the work, merciful toward the person doing it.</p>
+          <p class="action"><strong>Practice.</strong> Make a cookie jar on paper. List ten hard things you have already got through, with the dates if you know them. Read it whenever your mind says “I can’t.”</p>
+        </section>
+
+        <section class="section" id="section-7" aria-labelledby="s7-title">
+          <h2 id="s7-title">Meeting Hostility</h2>
+          <p>Marcus faced slander, conspiracy and a general who tried to take his throne. His counsel on how to meet unkindness is short:</p>
+          <blockquote class="pull-quote">The best way of avenging thyself is not to become like the wrong-doer.<cite>Marcus Aurelius, Meditations 6.6</cite></blockquote>
+          <p>Epictetus added that it is not the person who insults you that harms you, but your opinion that you have been insulted (<em>Enchiridion</em> 20). Do not retaliate. Do not perform your suffering for an audience. Stay courteous when it is hardest, because courtesy shows you are still in command of yourself. And remember Marcus’s reminder that human beings “are made for co-operation, like feet, like hands, like eyelids,” so that even your enemies are, in the end, your kin.</p>
+          <p class="action"><strong>Practice.</strong> Do one deliberately kind act this week for someone who has not earned it, even if it is only a civil greeting. Notice who is in charge when you do.</p>
+        </section>
+
+        <!-- PART III -->
+        <header class="part" id="part-3"><p class="part-num">Part III</p><h2 class="part-title">Cognitive Behavioural Tools</h2></header>
+
+        <section class="section" id="section-8" aria-labelledby="s8-title">
+          <h2 id="s8-title">What the Stoics Saw, Therapy Tested</h2>
+          <p>Cognitive behavioural therapy (CBT) was built on the Stoic insight. Albert Ellis and Aaron Beck, its pioneers, both credited the ancient Stoics, and Ellis often quoted Epictetus. The core model is simple: it is the <em>meaning</em> we give a situation, more than the situation itself, that shapes how we feel and what we do.</p>
+          <p>The result is a loop. <strong>Situation</strong> (I hear a noise) → <strong>thought</strong> (“They’re here”) → <strong>feeling</strong> (fear, 85 out of 100) → <strong>action</strong> (stay up, check the windows) → <strong>result</strong> (exhaustion, a stronger sense of threat) → back to the next thought. The loop feeds itself. The good news is that you can interrupt it at any link, and each interruption makes the next easier.</p>
+          <blockquote class="pull-quote">We suffer more often in imagination than in reality.<cite>Seneca, Letters to Lucilius 13</cite></blockquote>
+          <p class="action"><strong>Practice.</strong> Catch one loop today and write it on four lines: situation, thought, feeling (0–100), action.</p>
+        </section>
+
+        <section class="section" id="section-9" aria-labelledby="s9-title">
+          <h2 id="s9-title">The Thought Record</h2>
+          <p>The thought record is the workhorse of CBT, a page where you slow a thought down and examine it like a Stoic would. Use paper.</p>
+          <ol class="steps">
+            <li><strong>Situation.</strong> What happened? Facts only, as a camera would record it.</li>
+            <li><strong>Thought.</strong> What went through your mind? How strongly do you believe it (0–100)?</li>
+            <li><strong>Feeling.</strong> Name it and rate it (0–100).</li>
+            <li><strong>Other explanations.</strong> Write at least two more, even ones you doubt. What evidence is there for and against each?</li>
+            <li><strong>Balanced view and next step.</strong> What is the most useful thing to do? Rate your feeling again.</li>
+          </ol>
+          <p>You are not being asked to decide that the first thought is false. You are asking your mind for more than one option. Fear narrows the field of view to a single frightening story, and this exercise widens it again. It is the Stoic pause with a pencil in hand.</p>
+          <p class="action"><strong>Practice.</strong> Complete one thought record tonight. A copyable template is in the Tool Cards below.</p>
+        </section>
+
+        <section class="section" id="section-10" aria-labelledby="s10-title">
+          <h2 id="s10-title">Checking, Researching and Rumination</h2>
+          <p>When we feel threatened, we check: the windows, the street, the phone, the forums, the news. Checking brings brief relief, and brief relief teaches the alarm system to ring louder next time. Therapists call these <em>safety behaviours</em>. They are understandable, but over time they hold the fear in place and eat the hours that would have gone to living.</p>
+          <p>Rumination, the replaying and analysing of the same events, works the same way. It feels like problem-solving, but it never solves anything, because there is no new information in it. Be careful too of places, online or off, that leave you more frightened than you arrived. Ask of every source: <em>does this leave me steadier or shakier?</em></p>
+          <p>Try a small behavioural experiment. Delay a check by ten minutes. Observe what happens to the urge, which almost always peaks and falls on its own. Then delay it by twenty.</p>
+          <p class="action"><strong>Practice.</strong> Choose one fixed ten-minute “window” a day for checking or researching. Outside it, close the tab, stand up, and go for a walk.</p>
+        </section>
+
+        <section class="section" id="section-11" aria-labelledby="s11-title">
+          <h2 id="s11-title">The Body and the Day</h2>
+          <p>Fear lives in the body, and the body can be tuned. Sleep loss in particular makes everything look more threatening, so protecting sleep is not a luxury but a first duty.</p>
+          <p>Fix your wake time and keep it, including weekends. Drink water before anything else. Halve your caffeine, and none after noon. Walk outside daily, in daylight if possible. When the alarm surges, breathe in for four counts and out for six; the long exhale is what calms the nervous system.</p>
+          <p>CBT adds one more tool, <em>behavioural activation</em>: do the valued thing first and let the mood follow. Fear and low mood both say, “Stay in.” Plan one small activity every day that gives you either pleasure or a sense of achievement. A meal cooked, a shelf repaired, a letter written, a friend called. Doing is the antidote to dread.</p>
+          <p class="action"><strong>Practice.</strong> Set a fixed wake time, and schedule one valued activity for tomorrow. Put both in writing.</p>
+        </section>
+
+        <!-- PART IV -->
+        <header class="part" id="part-zen"><p class="part-num">Part IV</p><h2 class="part-title">Presence and Zen</h2></header>
+
+        <section class="section" id="section-now" aria-labelledby="snow-title">
+          <h2 id="snow-title">The Only Moment</h2>
+          <p>Eckhart Tolle’s <em>The Power of Now</em> rests on a plain observation: the past exists only as memory and the future only as imagination, and both appear in the one place you ever actually live, which is this moment. Most distress is mind-time, a rehearsal of what might come or a replay of what has been. The body, meanwhile, is only ever here.</p>
+          <blockquote class="pull-quote">Realize deeply that the present moment is all you ever have.<cite>Eckhart Tolle, The Power of Now</cite></blockquote>
+          <p>Tolle suggests a simple question: <em>“Is there a problem right now, in this moment?”</em> Not in your life, not this year. Now. Often what you find is a <em>situation</em> to be handled and a <em>story</em> about it that has grown much larger. The situation can be dealt with one step at a time. The story is what keeps you awake. Marcus Aurelius said much the same: do not disturb yourself by picturing the whole of your life.</p>
+          <p class="breathe-prompt"><button class="inline-breathe" type="button">Breathe for one minute</button></p>
+          <p class="action"><strong>Practice.</strong> Ground yourself. Name five things you can see, four you can hear, three you can feel against your skin. Then take one slow breath and ask: “What is needed right now?”</p>
+        </section>
+
+        <section class="section" id="section-thinker" aria-labelledby="sthinker-title">
+          <h2 id="sthinker-title">Watching the Thinker</h2>
+          <p>Thoughts arise on their own, the way weather does. You are not the weather. You are the sky it moves through. Tolle describes the moment you begin to watch your thinking, rather than being swept along by it, as the opening of a new dimension: there is now a thought, and there is <em>you, aware of the thought</em>. The two are not the same.</p>
+          <p>Zen has taught this for a thousand years, in the image of the mountain that sits unmoved while storms cross it. Modern therapy calls it <em>cognitive defusion</em> and borrows the technique directly: instead of “They’re against me,” say, “I’m having the thought that they’re against me.” The thought is still there, but it has lost its grip on you.</p>
+          <blockquote class="pull-quote">Sitting quietly, doing nothing, spring comes, and the grass grows by itself.<cite>Zen saying</cite></blockquote>
+          <p class="action"><strong>Practice.</strong> Sit for five minutes and watch your breath. Whenever a thought pulls you away, label it quietly (“planning,” “remembering,” “worrying”) and return to the breath. You will drift hundreds of times, and each return is the practice.</p>
+        </section>
+
+        <section class="section" id="section-sothat" aria-labelledby="ssothat-title">
+          <h2 id="ssothat-title">“Is That So?”</h2>
+          <p>The Zen master Hakuin lived in a village where a young woman became pregnant. Pressed by her angry parents, she named Hakuin as the father. They came to his door in a fury. He said only, “Is that so?” When the baby was born, they handed it to him, and he cared for it tenderly, borrowing milk from neighbours, enduring his lost reputation without complaint.</p>
+          <p>A year later, the girl confessed that the father was a young man from the fish market. The parents came back, ashamed, to ask forgiveness and take the child. Hakuin handed the baby over and said again, “Is that so?”</p>
+          <p>Praise and blame came to him, and he met both with the same open hands. A second tale, from the Taoist tradition, ends the same way. A farmer’s horse runs off, and the neighbours say, “What bad luck!” He answers, “Maybe.” The horse returns with a wild herd, and they say, “What good luck!” “Maybe.” His son is thrown breaking in a new horse and lamed. “Maybe.” The army then comes to conscript every young man, and passes the son by. The farmer says, “Maybe,” and goes on ploughing.</p>
+          <p class="action"><strong>Practice.</strong> The next time you are judged, or praised, silently say, “Is that so?” Then turn your attention back to what is in front of you.</p>
+        </section>
+
+        <section class="section" id="section-arrow" aria-labelledby="sarrow-title">
+          <h2 id="sarrow-title">The Second Arrow</h2>
+          <p>The Buddha taught that when a person is struck by an arrow, it hurts. But the untrained mind then shoots itself with a second arrow: the resentment, the dread, the retelling, the question of why me. The first arrow is the event. The second is the story we add, and it is the second that does most of the damage.</p>
+          <p>This is the same truth the Stoics found, the same one CBT measures and Tolle teaches: <em>pain comes unchosen, but suffering is largely what we add.</em> You cannot always prevent the first arrow. You can, with practice, decline the second.</p>
+          <p class="action"><strong>Practice.</strong> When something hurts, ask: “What is the first arrow, and what is the second?” Name each one on paper. Let the second one go, again and again.</p>
+        </section>
+
+        <section class="section" id="section-wood" aria-labelledby="swood-title">
+          <h2 id="swood-title">Chop Wood, Carry Water</h2>
+          <p>There is an old Zen saying: <em>before enlightenment, chop wood, carry water; after enlightenment, chop wood, carry water.</em> The point is that peace is not found by escaping ordinary life but by entering it fully. Wash the dishes only to wash the dishes. Walk only to walk. The mind that is wholly occupied with the task in front of it has no room left for the second arrow.</p>
+          <blockquote class="pull-quote">In the beginner’s mind there are many possibilities, but in the expert’s there are few.<cite>Shunryu Suzuki, Zen Mind, Beginner’s Mind</cite></blockquote>
+          <p>Beginner’s mind is the willingness to see things freshly, without the weight of a conclusion already reached. It is a gift to a person who has been circling the same thoughts for months.</p>
+          <p class="action"><strong>Practice.</strong> Choose one daily chore. Do it slowly, with no phone and no podcast, noticing the water, the weight, the sounds. It is five minutes of freedom.</p>
+        </section>
+
+        <!-- PART V -->
+        <header class="part" id="part-4"><p class="part-num">Part V</p><h2 class="part-title">Catholic Wisdom</h2></header>
+
+        <section class="section" id="section-12" aria-labelledby="s12-title">
+          <h2 id="s12-title">The Catholic Spine: Suffering That Produces Something</h2>
+          <p>The Catholic tradition does not say that suffering is good. It says that suffering <em>united to Christ</em> is never wasted. Saint Paul wrote that he rejoiced in his sufferings for the sake of others (Colossians 1:24), and that suffering produces endurance, endurance character, and character hope (Romans 5:3–5). Hence the old practice of “offering it up”: taking the pain you cannot remove and handing it to God, so that it becomes a gift instead of a grievance.</p>
+          <blockquote class="pull-quote">My grace is sufficient for you, for my power is made perfect in weakness.<cite>2 Corinthians 12:9</cite></blockquote>
+          <p>This is not theory. It is a discipline, and it asks very little: a sentence in the morning, a sentence at night. Prayer, as the mystics say, is mostly attention, and attention is the one thing you control entirely.</p>
+          <p class="action"><strong>Practice.</strong> Each morning, offer the day. Each evening, offer whatever was hard in it. Two sentences are enough: “Lord, I offer You this day.” “Lord, I offer You this day’s trouble.”</p>
+        </section>
+
+        <section class="section" id="section-13" aria-labelledby="s13-title">
+          <h2 id="s13-title">The Little Way and the Dark Night</h2>
+          <p>Saint Thérèse of Lisieux, who died at twenty-four, taught that holiness lies in small things done with great love, with no heroics required. A glass of water offered, a kind word, a task finished well: “Miss no single opportunity of making some small sacrifice.” Her path was available to anyone, on any day, in any state of mind.</p>
+          <p>Saint John of the Cross described the “dark night,” a season when God feels absent and prayer feels like speaking into a void. His teaching is that the absence is not abandonment but a deepening, and that faith without consolation is faith at its purest. And Saint Ignatius of Loyola left one rule for such times: <em>in desolation, never make a major change.</em> Wait for the light before you move house, quit a job, or burn a bridge.</p>
+          <blockquote class="pull-quote">Let nothing disturb you, let nothing frighten you. All things are passing. God never changes. Patience obtains all things.<cite>Saint Teresa of Avila, from her bookmark</cite></blockquote>
+          <p class="action"><strong>Practice.</strong> Do one small act of love today, and put no big decision on the calendar this week.</p>
+        </section>
+
+        <section class="section" id="section-sacrament" aria-labelledby="ssacr-title">
+          <h2 id="ssacr-title">The Sacrament of the Present Moment</h2>
+          <p>The Catholic tradition has its own teaching on the present moment, and it is older than any app. The eighteenth-century Jesuit Jean-Pierre de Caussade wrote of “the sacrament of the present moment”: whatever this moment holds, ordinary or painful, is where God meets you, and the only place He can. Brother Lawrence, a seventeenth-century Carmelite lay brother who worked in his monastery’s kitchen, found he could be as close to God among the clatter of pots as at the altar. He called it the practice of the presence of God, and it consisted of turning the heart toward Him, again and again, in small things.</p>
+          <blockquote class="pull-quote">Do not be anxious about tomorrow, for tomorrow will be anxious for itself. Let the day’s own trouble be sufficient for the day.<cite>Matthew 6:34</cite></blockquote>
+          <p class="action"><strong>Practice.</strong> While you work, walk or wash up, whisper the Jesus Prayer, or simply “My God, I am Yours.” No ceremony needed.</p>
+        </section>
+
+        <section class="section" id="section-14" aria-labelledby="s14-title">
+          <h2 id="s14-title">Spiritual Warfare in the Spirit of Fr. Chad Ripperger</h2>
+          <p>Fr. Chad Ripperger, a priest, exorcist and Thomist, is among the best-known contemporary Catholic voices on spiritual warfare. What follows is a summary of themes common to his teaching and to Catholic tradition, in my own words and not as direct quotation. Please go to him, and to your priest, for the real thing.</p>
+          <ol class="steps">
+            <li><strong>The enemy is a creature, and limited.</strong> Following Saint Thomas Aquinas, demons cannot read your heart, cannot force your will, and are infinitely beneath God. Your will remains your own.</li>
+            <li><strong>Their usual work is quiet.</strong> The ordinary tools are discouragement, fear, confusion, isolation and fixation. These are exactly the traps this guide warns of, so the remedy is the same: order.</li>
+            <li><strong>Order is the defence.</strong> A regular life of prayer, the Rosary, frequent confession, Mass, honest work, sleep, and obedience to a spiritual director gives the enemy nothing to work with.</li>
+            <li><strong>Do not dialogue, and do not obsess.</strong> The tradition says to give no attention, no debate and no curiosity. Attention feeds the problem. Turn to God, not toward the disturbance.</li>
+            <li><strong>Discern with care.</strong> The Church’s own norms for exorcists (the Roman Ritual) warn them not to be quick to assume diabolical activity, and to rule out illness, medical or psychological, first. This is the Church’s wisdom, and a sensible priest will want you to see a doctor as well as a confessor.</li>
+          </ol>
+          <p class="action"><strong>Practice.</strong> Go to confession this week. Ask your pastor to read this section, and bring him your questions. Let him guide what comes next.</p>
+        </section>
+
+        <section class="section" id="section-15" aria-labelledby="s15-title">
+          <h2 id="s15-title">The Old Toolkit</h2>
+          <p>The Church’s help is old, free and available at any parish: holy water at the door, a crucifix facing the room, a Saint Benedict medal, blessed salt, confession, and the Eucharist. The sacraments are never sold. If you feel you need more than this, go through your parish priest and diocese, who can refer you to someone authorised to help. Do not seek out private “deliverance” groups, which are not under the Church’s oversight.</p>
+          <p>The prayer many keep by their bed:</p>
+          <blockquote class="pull-quote">Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do thou, O Prince of the heavenly host, by the power of God, cast into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen.<cite>Prayer to Saint Michael</cite></blockquote>
+          <p>And Padre Pio’s advice, simple enough for a bad night: <em>“Pray, hope, and don’t worry.”</em></p>
+          <p class="action"><strong>Practice.</strong> Say the Saint Michael prayer slowly tonight, then close the laptop, turn off the light and go to sleep.</p>
+        </section>
+
+        <section class="section" id="section-prayers" aria-labelledby="sprayers-title">
+          <h2 id="sprayers-title">Prayers for the Day</h2>
+          <p>Prayer is not a performance. It is attention turned toward God, and short prayers said sincerely are enough. Here are the great old prayers, gathered by the time of day they suit. Choose two or three and let them become habits.</p>
+          <div class="prayer-grid">
+            <div class="prayer"><p class="when">Morning</p><h3>Morning Offering</h3><p>O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys and sufferings of this day, for all the intentions of Your Sacred Heart. Amen.</p></div>
+            <div class="prayer"><p class="when">Beginning and end</p><h3>Sign of the Cross</h3><p>In the name of the Father, and of the Son, and of the Holy Spirit. Amen.</p></div>
+            <div class="prayer"><p class="when">Anytime</p><h3>Our Father</h3><p>Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</p></div>
+            <div class="prayer"><p class="when">Anytime</p><h3>Hail Mary</h3><p>Hail Mary, full of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.</p></div>
+            <div class="prayer"><p class="when">Anytime</p><h3>Glory Be</h3><p>Glory be to the Father, and to the Son, and to the Holy Spirit, as it was in the beginning, is now, and ever shall be, world without end. Amen.</p></div>
+            <div class="prayer"><p class="when">When afraid</p><h3>The Jesus Prayer</h3><p>Lord Jesus Christ, Son of God, have mercy on me, a sinner.</p></div>
+            <div class="prayer"><p class="when">When afraid</p><h3>Psalm 23</h3><p>The Lord is my shepherd; I shall not want. Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.</p></div>
+            <div class="prayer"><p class="when">When alone</p><h3>Guardian Angel</h3><p>Angel of God, my guardian dear, to whom God’s love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.</p></div>
+            <div class="prayer"><p class="when">When in need</p><h3>The Memorare</h3><p>Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession, was left unaided. Inspired by this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.</p></div>
+            <div class="prayer"><p class="when">For those who trouble you</p><h3>A Prayer for Enemies</h3><p>Lord, I place before You those who trouble me. I do not understand them, and I am not asked to. Bless them, heal what is broken in them, and keep my heart free of bitterness. Amen. <span class="src">In the spirit of Matthew 5:44</span></p></div>
+            <div class="prayer"><p class="when">Evening</p><h3>Act of Contrition</h3><p>O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasion of sin. Amen.</p></div>
+          </div>
+          <h3 class="subhead">The Examen, an evening prayer from Saint Ignatius</h3>
+          <ol class="steps">
+            <li><strong>Gratitude.</strong> Thank God for the day’s gifts, however small.</li>
+            <li><strong>Review.</strong> Walk gently through the day, noticing where you were steady and where you stumbled.</li>
+            <li><strong>Sorrow.</strong> Ask pardon for what was wrong, without self-contempt.</li>
+            <li><strong>Mercy.</strong> Receive forgiveness, and forgive in return.</li>
+            <li><strong>Tomorrow.</strong> Ask for grace for the day ahead.</li>
+          </ol>
+          <p>If the Rosary is new to you: begin with the Sign of the Cross, the Apostles’ Creed, one Our Father, three Hail Marys and a Glory Be. Then pray five “decades,” each an Our Father, ten Hail Marys and a Glory Be, holding a mystery of Christ’s life in mind. Finish with the Hail Holy Queen. Do not worry about doing it perfectly. One decade is already a prayer.</p>
+          <p class="action"><strong>Practice.</strong> Choose one morning prayer and one evening prayer from above. Keep them for a month.</p>
+        </section>
+
+        <!-- PART V -->
+        <header class="part" id="part-good"><p class="part-num">Part VI</p><h2 class="part-title">A Good Life, Anyway</h2></header>
+
+        <section class="section" id="section-live" aria-labelledby="slive-title">
+          <h2 id="slive-title">You Are Allowed to Live Well</h2>
+          <p>There is a quiet trap in hard seasons: the belief that life must wait until the trouble is over. It does not have to. Boethius wrote <em>The Consolation of Philosophy</em> in a prison cell awaiting execution, and the book is about happiness, not revenge. Philosophy was never meant to be only a shield. It is a way of living richly, even now.</p>
+          <blockquote class="pull-quote">It is not that we have a short time to live, but that we waste much of it.<cite>Seneca, On the Shortness of Life</cite></blockquote>
+          <p>Epicurus put the same idea gently: do not spoil what you have by desiring what you have not. A good day does not deny your difficulties, and it is not defiance. It is simply the point. Every good day you build is one that nothing and no one can take back.</p>
+          <p class="action"><strong>Practice.</strong> Write a list of ten things that make a day good: a song, a meal, a place, a person, a task. Do one of them today. A copyable template is in the Tool Cards.</p>
+        </section>
+
+        <section class="section" id="section-others" aria-labelledby="sothers-title">
+          <h2 id="sothers-title">Let Others Be Themselves</h2>
+          <p>Much of our weariness comes from trying to manage other people’s minds: wanting them to stop, to understand, to see it our way, to be someone else. Marcus Aurelius reminded himself that it is foolish to be shocked when a fig tree bears figs. People act from their own limits, histories and fears. You do not have to like it, but you can stop being surprised by it.</p>
+          <p>That includes the people closest to you who do not understand, or do not agree. It includes those who have wronged you. Releasing them is not approval, and it is not surrender. It is putting down a weight that was never yours to carry. When you stop auditing everyone’s thoughts, you get your mind back for your own life.</p>
+          <p class="action"><strong>Practice.</strong> Think of one person you have been trying to change or convince. Say, quietly, “May you be well, even if you never understand me.” Then let the conversation go.</p>
+        </section>
+
+        <section class="section" id="section-pleasures" aria-labelledby="spleasures-title">
+          <h2 id="spleasures-title">Good Music, Good Food, Long Walks</h2>
+          <p><strong>Music.</strong> The ancients believed music ordered the soul, and anyone who has played the right song at the right moment knows they were right. Make a playlist for hard days and another for good ones. Put on something you love, loudly, while you cook. Sing badly. Learn an instrument at any age. Go to a concert, or a choir, or a church where the music is beautiful.</p>
+          <p><strong>Food.</strong> Eat real meals, at a table, without a screen. Cook something slowly: soup, bread, a roast. Share it, even with one person. Eating well is a daily act of self-respect and a small sacrament of its own.</p>
+          <p><strong>Walks.</strong> Walk every day, in daylight, with no destination. Notice the sky, the trees, the dogs, the weather. Walk with a friend and talk about anything but the trouble.</p>
+          <blockquote class="pull-quote">Above all, do not lose your desire to walk.<cite>Søren Kierkegaard, in a letter, 1847</cite></blockquote>
+          <p class="action"><strong>Practice.</strong> This week: one new song you love, one good meal you cook, and three long walks. Put them in your calendar like appointments.</p>
+        </section>
+
+        <section class="section" id="section-build" aria-labelledby="sbuild-title">
+          <h2 id="sbuild-title">Build Something</h2>
+          <p>Few things restore a person like making something real. Repair a bicycle. Plant a garden. Write a story, a program, a song. Carve, paint, bake, sew, restore a chair. Take up photography, birdwatching, astronomy, a language. Volunteer somewhere your hands are useful. A project gives your attention a worthy home, and it proves, daily, that you are a person who makes things.</p>
+          <p>Work done well is a form of prayer, as the old monks knew. And whatever you build, however modest, goes on in the world after you. Start small: twenty minutes a day, every day, is a cathedral in a year.</p>
+          <p class="action"><strong>Practice.</strong> Choose one thing to build or learn. Decide its first twenty-minute step. Do it today.</p>
+        </section>
+
+        <!-- PART VII -->
+        <header class="part" id="part-5"><p class="part-num">Part VII</p><h2 class="part-title">Living It Out</h2></header>
+
+        <section class="section" id="section-16" aria-labelledby="s16-title">
+          <h2 id="s16-title">Handling People</h2>
+          <p>Some people will believe you, some will not, and some will not know what to say. None of this is yours to control, and your peace should not wait on their verdict. Do not argue with the unconvinced. You owe no one an explanation of your inner life.</p>
+          <p>Do keep a small circle, three people or so, who listen with kindness. Choose people who care about <em>you</em>, not only about the story, and who will tell you honestly if they see you running on empty. A good friend does both. Friendship is how the Stoics understood the good life: we are made to help one another.</p>
+          <p class="action"><strong>Practice.</strong> Choose three people and schedule a brief check-in with each, weekly. Talk about life, not only about the trouble.</p>
+        </section>
+
+        <section class="section" id="section-17" aria-labelledby="s17-title">
+          <h2 id="s17-title">Money, Work and Time</h2>
+          <p>Protect your income if you can, but not at the cost of your health. If a workplace has become unbearable, make a calm plan rather than a sudden exit; Ignatius’s rule applies here, too. Time is the one resource that cannot be replenished, so spend it on what restores you: people, work well done, prayer, the outdoors, something you are learning.</p>
+          <blockquote class="pull-quote">Waste no more time arguing about what a good man should be. Be one.<cite>Marcus Aurelius, Meditations 10.16</cite></blockquote>
+          <p>A larger project, such as a language, a craft, volunteer work or a course, makes the trouble a smaller part of a bigger life. The goal is not to win a battle but to preserve your capacity to live well.</p>
+          <p class="action"><strong>Practice.</strong> Set a daily limit on work hours, and start or resume one project that has nothing to do with any of this.</p>
+        </section>
+
+        <section class="section" id="section-18" aria-labelledby="s18-title">
+          <h2 id="s18-title">The Evening Review</h2>
+          <p>Seneca kept a nightly habit. When the lamp was out, he reviewed his day and asked what he had done well, where he had failed and what he would do better. He did it without scolding. “Why should I fear any of my mistakes,” he wrote, “when I can say: see that you do not do it again, and now I forgive you?”</p>
+          <p>Write it on paper in three columns: <strong>Fact</strong> (what happened, as a camera would see it), <strong>Interpretation</strong> (what I made of it), <strong>Response</strong> (what I did, and what I will do next time). Over weeks, you will see patterns: which interpretations cost you sleep, which responses served you. Finish with three things that went well, however small.</p>
+          <p>The point of the journal is clarity, not a case file or ammunition. Keep it somewhere private, and close it when you are done.</p>
+          <p class="action"><strong>Practice.</strong> Tonight, write one Fact / Interpretation / Response entry and three good things from the day.</p>
+        </section>
+
+        <section class="section" id="section-19" aria-labelledby="s19-title">
+          <h2 id="s19-title">The Traps</h2>
+          <p><strong>Revenge</strong> consumes you and changes nothing. <strong>Isolation</strong> turns a hard season into a closed room. <strong>Obsession</strong>, the endless research, feeds the fear it hopes to quiet. <strong>Dread of the future</strong> robs the only time you can act in. And there is the quiet trap of <strong>self-contempt</strong>, in which every lapse becomes proof that you are failing. Be as patient with yourself as you would be with a friend.</p>
+          <blockquote class="pull-quote">Do not disturb thyself by thinking of the whole of thy life.<cite>Marcus Aurelius, Meditations 8.36</cite></blockquote>
+          <p>Take today. Only today. You can bear a day.</p>
+          <p class="action"><strong>Practice.</strong> When you notice yourself in a trap, close the browser, stand, and go for a walk.</p>
+        </section>
+
+        <section class="section" id="section-20" aria-labelledby="s20-title">
+          <h2 id="s20-title">When to Ask for Help</h2>
+          <p><strong>If you are in immediate danger, or are thinking of harming yourself or anyone else, call 911 now, or call or text 988 (Canada and the US).</strong> Reaching out is stewardship of your life and is no failure.</p>
+          <p>For the everyday strain of this, there is more help than most people use. A family doctor can help with sleep, anxiety and exhaustion. A CBT therapist can sharpen every tool in Part III. A priest can walk with you spiritually. Seeking any of these does not concede anything about what is happening around you; it is simply good care of the person at the centre of it. Marcus himself was often ill and kept the physician Galen close.</p>
+          <p>If you are being threatened by a specific person, tell the local police and trusted people in your life.</p>
+          <p class="action"><strong>Practice.</strong> Book one appointment this month: a doctor for sleep and stress, a counsellor, or a priest. Put it in your calendar now.</p>
+        </section>
+
+        <section class="section" id="section-21" aria-labelledby="s21-title">
+          <h2 id="s21-title">The Daily Rule</h2>
+          <p>Everything above fits on a single day. Keep it small enough that you can do it on your worst day.</p>
+          <ol class="steps">
+            <li><strong>Morning.</strong> Same wake time. Water. Two columns: mine and not mine. Offer the day.</li>
+            <li><strong>Day.</strong> Do the work in front of you. One walk. One valued activity. One conversation with someone kind. Check only in the window you set.</li>
+            <li><strong>Evening.</strong> Fact, interpretation, response. Three good things. Saint Michael prayer. Lights out at a regular hour.</li>
+          </ol>
+          <p class="action"><strong>Practice.</strong> Do the Daily Rule for seven days, then read this guide again from the top.</p>
+        </section>
+
+        <section class="section" id="section-22" aria-labelledby="s22-title">
+          <h2 id="s22-title">The Last Thing</h2>
+          <p>You are not alone. Others have walked hard roads before you: slaves and emperors, saints and prisoners. Each found that a person can lose nearly everything and keep the one thing that matters, the freedom to choose how to stand. Stand. Endure. Offer what you can. This too shall pass.</p>
+          <blockquote class="pull-quote">God, grant me the serenity to accept the things I cannot change, courage to change the things I can, and wisdom to know the difference.<cite>The Serenity Prayer, Reinhold Niebuhr</cite></blockquote>
+          <p>The world may be loud. Your mind remains your own.</p>
+          <p class="action"><strong>Practice.</strong> Say the prayer slowly, once, and go on with your day.</p>
+        </section>
+
+        <section class="tool-cards" id="tools" aria-labelledby="tools-title">
+          <h2 id="tools-title">Tool Cards</h2>
+          <p class="tools-intro">Take the guide with you. Each card can be previewed, copied, downloaded as a text file, or printed on its own. Nothing is sent anywhere.</p>
+          <div class="tool-cards-grid">
+            <article class="tool-card" data-tool="brief">
+              <p class="tool-tag">Quick reference</p>
+              <h3>One-Page Brief</h3>
+              <p class="tool-desc">The whole guide on one sheet: every section’s title and its single practice. Keep it on the fridge or by the bed.</p>
+              <ul class="tool-inside"><li>Every practice in the guide, in order</li><li>Built fresh from the guide</li><li>Ends with the Serenity Prayer</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="brief">Copy</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+            <article class="tool-card" data-tool="thought">
+              <p class="tool-tag">When your mind is racing</p>
+              <h3>Thought Record</h3>
+              <p class="tool-desc">The five-step CBT exercise from Part III, as a blank form. Slow a frightening thought down and look at it from more than one side.</p>
+              <ul class="tool-inside"><li>Facts, thought and feeling, each rated 0–100</li><li>Room for at least two other explanations</li><li>A balanced view and your next step</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="thought">Copy</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+            <article class="tool-card" data-tool="log">
+              <p class="tool-tag">Every evening</p>
+              <h3>Evening Journal</h3>
+              <p class="tool-desc">A spreadsheet-ready log for the Evening Review: what happened, what you made of it, and what you did, with a place for three good things.</p>
+              <ul class="tool-inside"><li>Fact · Interpretation · Response</li><li>Feeling rated 0–100 to see patterns</li><li>Paste straight into Excel or Sheets</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="log">Copy TSV</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+            <article class="tool-card" data-tool="pocket">
+              <p class="tool-tag">Carry it with you</p>
+              <h3>Pocket Card</h3>
+              <p class="tool-desc">The Daily Rule, the breathing method and two short prayers, small enough to print and fold into a wallet.</p>
+              <ul class="tool-inside"><li>Morning, day and evening in three lines</li><li>The 4-in, 6-out breath</li><li>911 / 988 reminder</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="pocket">Copy</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+            <article class="tool-card" data-tool="prayer">
+              <p class="tool-tag">Morning, evening, anytime</p>
+              <h3>Prayer Card</h3>
+              <p class="tool-desc">The core Catholic prayers from Part V on one printable page, for people who want to pray without scrolling or searching.</p>
+              <ul class="tool-inside"><li>Morning Offering and Guardian Angel</li><li>Saint Michael, Memorare and Jesus Prayer</li><li>Act of Contrition and Serenity Prayer</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="prayer">Copy</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+            <article class="tool-card" data-tool="goodlife">
+              <p class="tool-tag">Plan your week</p>
+              <h3>Good Life List</h3>
+              <p class="tool-desc">Ten things that make a day good, plus a weekly plan for music, food, walks, building something and one phone call.</p>
+              <ul class="tool-inside"><li>Ten good-day ingredients</li><li>One new song, one good meal, three walks</li><li>One thing to build, one person to call</li></ul>
+              <details class="tool-preview"><summary>Preview</summary><pre></pre></details>
+              <div class="tool-actions">
+                <button class="copy-btn" data-copy="goodlife">Copy</button>
+                <button class="dl-btn" type="button">Download</button>
+                <button class="print-tool-btn" type="button">Print</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <footer role="contentinfo">
+          <div class="ornament" aria-hidden="true"><span>✦</span></div>
+          <p class="footer-line">Go gently. One day, one section, one small practice.</p>
+          <p><a href="#hero-title" class="to-top">↑ Back to the beginning</a></p>
+          <p>Free, no account, no tracking. Print it and give it away.</p>
+          <p>This guide offers philosophy and spiritual companionship. It is not medical advice and does not replace a doctor, therapist or priest.</p>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
